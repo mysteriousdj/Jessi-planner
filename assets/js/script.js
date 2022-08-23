@@ -1,13 +1,4 @@
-// var nine = document.getElementById('9')
-// var ten = document.getElementById('10')
-// var eleven = document.getElementById('11')
-// var twelve = document.getElementById('12')
-// var thirteen = document.getElementById('1')
-// var fourteen = document.getElementById('2')
-// var fifteen = document.getElementById('3')
-// var sixteen = document.getElementById('4')
-// var seventeen = document.getElementById('5')
-// var eigthteen = document.getElementById('6')
+
 
 var todayDate = moment().format('dddd, MMM Do YYYY');
 $("#currentDay").html(todayDate);
