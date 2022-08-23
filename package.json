@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "moment": "^2.29.4"
+  },
+  "name": "jessi-planner",
+  "description": "BootCamp Challenge - 05 Third-Party APIs Challenge: Work Day Scheduler",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mysteriousdj/Jessi-planner.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mysteriousdj/Jessi-planner/issues"
+  },
+  "homepage": "https://github.com/mysteriousdj/Jessi-planner#readme"
+}
