@@ -57,7 +57,7 @@ function saveDataFormSubmit(event) {
     $("#hour18 .description").val(localStorage.getItem("hour18"));
 
 saveData.on('submit', saveDataFormSubmit);
-textDataE1.on('click', save);
+textDataE1.on('click', saveData);
     timeTracker();
     // $('.saveBtn').on('click', storeData);
 
