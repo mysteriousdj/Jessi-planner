@@ -1,24 +1,30 @@
+var dateDisplayE1 = $('#date-display');
+var textDisplayE1 = $('text-display');
+var textDataE1 = $('$text-data')
+var blockTime = $('time-block')
+
+function displayDate() {
+    var todayDate = moment().format('ddd, MMM Do YYYY');
+    dateDisplayE1.text(todayDate);
+}
+
+// function printTextData(text) {
+//     var 
+// }
+
+function saveDataFormSubmit(event) {
+    event.preventDefault();
+
+  var text = textDataE1.val().trim()
+    console.log("Appointment Added to localstorage")
+  
+  printTextData(text);
+  }
 
 
-var todayDate = moment().format('dddd, MMM Do YYYY');
-$("#currentDay").html(todayDate);
-
-$(document).ready(function () {
-    $(".saveBtn").on("click", function () {
-        var text = $(this).child(".description").val();
-        var time = $(this).parent().attr("id");
-
-        console.log("Appointment Added to localstorage");
-
-        localStorage.setItem(time, text);
-        return;
-    })
-   
     function timeTracker() {
         var present = moment().hour();
-
-        $(".time-block").each(function () {
-            var blockTime = parseInt($(this).attr("id").split("hour")[1]);
+        var blockTime = parseInt($(this).attr("id").split("hour")[1]);
 
             if (blockTime < present) {
                 $(this).removeClass("future");
@@ -36,10 +42,8 @@ $(document).ready(function () {
                 $(this).addClass("future");
 
             }
-        })
-    }
-
-
+        }
+    
     $("#hour8 .description").val(localStorage.getItem("hour8"));
     $("#hour9 .description").val(localStorage.getItem("hour9"));
     $("#hour10 .description").val(localStorage.getItem("hour10"));
@@ -52,6 +56,8 @@ $(document).ready(function () {
     $("#hour17 .description").val(localStorage.getItem("hour17"));
     $("#hour18 .description").val(localStorage.getItem("hour18"));
 
+saveData.on('submit', saveDataFormSubmit);
+textDataE1.on('click', save);
     timeTracker();
     // $('.saveBtn').on('click', storeData);
-})
+
